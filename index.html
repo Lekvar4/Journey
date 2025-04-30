@@ -132,6 +132,26 @@
     </section>
     
     <section>
+    <h2>✅ Bro's Daily Silent Grind Tracker</h2>
+    <form id="dailyTracker">
+        <label><input type="checkbox" name="task"> Learned German today (at least 30 minutes)</label><br><br>
+        <label><input type="checkbox" name="task"> Hustled or posted (Instagram, TikTok, Clients)</label><br><br>
+        <label><input type="checkbox" name="task"> Saved at least ₦500 today (no matter how small)</label><br><br>
+        <label><input type="checkbox" name="task"> Protected my mind (No fear, no noise)</label><br><br>
+        <label><input type="checkbox" name="task"> Remembered my goal (Escape 2026!)</label><br><br>
+    </form>
+
+    <button onclick="clearTasks()">Clear All for Today</button>
+</section>
+
+<script>
+function clearTasks() {
+    const tasks = document.getElementsByName('task');
+    tasks.forEach(task => task.checked = false);
+}
+</script>
+    
+    <section>
     <h2>📅 Bro's Silent Escape Calendar Tracker (May 2025 – September 2026)</h2>
     <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: center;">
         <thead style="background-color: #0056b3; color: white;">
