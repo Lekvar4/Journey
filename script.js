@@ -29,20 +29,19 @@ document.getElementById('idForm').addEventListener('submit', function(e) {
   }
 });
 
-// Template switcher
 document.getElementById('idType').addEventListener('change', function() {
   const type = this.value;
   const card = document.getElementById('idCard');
   const title = document.getElementById('cardTitle');
 
-  card.classList.remove('passport-template', 'national-template');
-
   if (type === 'passport') {
-    card.classList.add('passport-template');
+    card.style.backgroundImage = "url('https://i.imgur.com/O8UJm0K.png')";
     title.innerHTML = 'United States of America<br>Passport';
   } else if (type === 'national') {
-    card.classList.add('national-template');
+    card.style.backgroundImage = "url('https://i.imgur.com/A6VtdMl.png')";
     title.innerHTML = 'United States of America<br>National ID Card';
+  } else {
+    card.style.backgroundImage = '';
   }
 });
 
